@@ -140,6 +140,28 @@
             font-size: 1.05rem;
         }
 
+        /* ===== BOUTON CV ===== */
+        .hero-actions {
+            margin-top: 2rem;
+        }
+
+        .btn-cv {
+            display: inline-block;
+            padding: 0.9rem 1.8rem;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8);
+            color: #ffffff;
+            font-weight: 500;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-cv:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(56, 189, 248, 0.4);
+        }
+
         /* ===== ANIMATIONS SCROLL ===== */
         .reveal {
             opacity: 0;
@@ -221,6 +243,12 @@
     <div>
         <h1>Au-delà du diplôme,<br>une formation tournée vers la donnée</h1>
         <span>Portfolio</span>
+
+        <div class="hero-actions">
+            <a href="assets/CV_Alexis_LeLabousse.pdf" class="btn-cv" download>
+                Télécharger mon CV
+            </a>
+        </div>
     </div>
 </section>
 
