@@ -1,11 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Portfolio – Science des Données</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Police moderne -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-section: #111827;
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+            --accent: #38bdf8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* ===== NAVBAR ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero span {
+            display: block;
+            font-size: 1rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 6rem 2rem;
+            background-color: var(--bg-section);
+        }
+
+        section:nth-child(even) {
+            background-color: var(--bg-dark);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* ===== ANIMATIONS SCROLL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #020617;
+            padding: 2.5rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .footer-container a,
+        .footer-container span {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-container a:hover {
+            color: var(--accent);
+        }
+
+        .footer-container i {
+            font-size: 1.2rem;
+        }
+
+    </style>
 </head>
+
 <body>
-    <h1>Portfolio</h1>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#modelisation">Modélisation</a></li>
+            <li><a href="#traitement">Traitement</a></li>
+            <li><a href="#analyse">Analyse</a></li>
+            <li><a href="#valorisation">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ACCUEIL -->
+<section class="hero" id="accueil">
+    <div>
+        <h1>Au-delà du diplôme,<br>une formation tournée vers la donnée</h1>
+        <span>Portfolio</span>
+    </div>
+</section>
+
+<!-- ETABLISSEMENT -->
+<section>
+    <div class="container reveal">
+        <h2>L’établissement</h2>
+        <p>
+            Implanté au cœur du territoire breton, l’IUT de Vannes s’inscrit dans une démarche
+            pédagogique professionnalisante, alliant enseignements théoriques solides et projets
+            concrets. La proximité avec le monde professionnel et le travail en équipe constituent
+            des piliers essentiels de la formation.
+        </p>
+    </div>
+</section>
+
+<!-- FORMATION -->
+<section>
+    <div class="container reveal">
+        <h2>La formation</h2>
+        <p>
+            Le BUT Science des Données forme des profils capables de collecter, traiter, analyser
+            et valoriser des données. Le parcours Exploration et Modélisation Statistique met
+            particulièrement l’accent sur l’analyse, la modélisation et l’utilisation d’outils
+            statistiques et informatiques pour répondre à des problématiques concrètes.
+        </p>
+    </div>
+</section>
+
+<!-- QUI JE SUIS -->
+<section>
+    <div class="container reveal">
+        <h2>Qui je suis</h2>
+        <p>
+            Étudiant en Science des Données, je m’intéresse particulièrement à l’analyse et à la
+            valorisation des données pour aider à la prise de décision. À travers les SAE et les
+            expériences en milieu professionnel, j’ai développé des compétences techniques,
+            méthodologiques et organisationnelles que je souhaite continuer à approfondir.
+        </p>
+    </div>
+</section>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+        reveals.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (top < windowHeight - 100) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+
+<footer>
+    <div class="footer-container">
+        <a href="https://www.linkedin.com/in/alexis-le-labousse-7b98ba330/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+        </a>
+
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            alexis.lelabousse@gmail.com
+        </span>
+
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            07 69 80 31 38
+        </span>
+    </div>
+</footer>
+
 </body>
 </html>
