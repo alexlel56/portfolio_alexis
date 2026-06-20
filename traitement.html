@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Traitement – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Police -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS commun -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="modelisation.html">Modélisation</a></li>
+            <li><a href="traitement.html" class="active">Traitement</a></li>
+            <li><a href="analyse.html">Analyse</a></li>
+            <li><a href="valorisation.html">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>Du brut à l’exploitable</h2>
+        <p class="intro">
+            Le traitement des données consiste à collecter, nettoyer, transformer et structurer
+            des données brutes afin de les rendre exploitables pour l’analyse et la prise de
+            décision. En Science des Données, cette étape est essentielle pour garantir la
+            qualité, la fiabilité et la cohérence des résultats.
+        </p>
+    </div>
+</section>
+
+<section class="section sae-section reveal">
+    <div class="container">
+        <h3>Conception et implémentation d’une base de données relationnelle</h3>
+
+        <p>
+            Une entreprise de distribution souhaite informatiser sa gestion. 
+            L'entreprise COMPUDISTRI vend des composants informatiques et gère ses clients, articles et fournisseurs à travers une base relationnelle.
+            Les employés, les commandes et les stocks doivent être suivis de manière fiable et normalisée.
+        </p>
+
+        <div class="sae-proof-animated">
+        <a href="sae2-01.html">
+            <div class="sae-proof">
+                <img src="images/preuve_SAE2.01.png" alt="Modèle relationnel SAE 2-01">
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+
+<section class="section sae-section reveal">
+    <div class="container">
+        <h3>Intégration de données dans un datawarehouse</h3>
+
+            <p>
+            Dans cette SAÉ, l’objectif était de concevoir et d’alimenter un datawarehouse afin de centraliser des données
+            provenant de sources hétérogènes. Le projet s’inscrivait dans une logique décisionnelle, en structurant les données
+            autour de faits et de dimensions. Une attention particulière a été portée à la qualité des données, à leur cohérence
+            et à leur historisation pour permettre des analyses fiables.
+            </p>
+
+        <div class="sae-proof-animated">
+        <a href="sae3-02.html">
+            <div class="sae-proof">
+                <img src="images/preuve_SAE3.02.png" alt="Job Talend SAE 3-02">
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+        reveals.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (top < windowHeight - 100) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SAÉ 4-01 – Modélisation du nombre de points marqués en NBA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="modelisation.html">Modélisation</a></li>
+            <li><a href="traitement.html">Traitement</a></li>
+            <li><a href="analyse.html">Analyse</a></li>
+            <li><a href="valorisation.html">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- TITRE SAE -->
+    <section class="sae-container" style="text-align:center;">
+        <h1>Expliquer et prédire le nombre de points marqués en NBA par régression linéaire robuste</h1>
+        <div class="sae-proof-static">
+            <img src="images/preuve_SAE4.01.png" alt="Relation entre salaire et points marqués - SAÉ 4-01">
+            <p class="sae-caption">Relation entre le salaire (en millions de dollars) et le nombre de points marqués — saison NBA 2024-2025</p>
+        </div>
+    </section>
+
+    <!-- OBJECTIFS DU PROGRAMME NATIONAL -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Objectifs du programme national</h2>
+        <p>
+            Cette SAÉ place l'étudiant en situation de statisticien chargé de construire un modèle linéaire
+            multivarié pour expliquer les variations d'une variable quantitative à partir de plusieurs
+            variables explicatives qualitatives et quantitatives. L'objectif est double : trouver le modèle
+            le plus pertinent selon le but visé et conduire l'intégralité de la démarche, 
+            de la préparation des données jusqu'à la validation du modèle et à la prévision. 
+            L'étudiant apprend à identifier les modèles possibles, à en évaluer la qualité 
+            et à restituer ses conclusions dans un contexte professionnel.
+        </p>
+    </section>
+
+    <!-- COMPÉTENCES DU PROGRAMME MOBILISÉES -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Compétences du programme mobilisées</h2>
+        <ul style="list-style-type: none; padding: 0; display: inline-block; text-align: left;">
+            <li>Modéliser les données dans un cadre statistique</li>
+            <li>Analyser statistiquement les données</li>
+            <li>Valoriser une production dans un contexte professionnel</li>
+            <li>Comprendre l'impact du type de données sur le choix de la modélisation à mettre en œuvre</li>
+            <li>Apprécier les limites de validité et les conditions d'application d'un modèle</li>
+            <li>Réaliser l'importance de la mise en œuvre d'une procédure de test statistique pour valider ou non une hypothèse</li>
+        </ul>
+    </section>
+
+    <!-- MÉTHODOLOGIE ET OUTILS UTILISÉS -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Méthodologie et outils utilisés</h2>
+        <p>
+            Les données portent sur 570 joueurs NBA de la saison 2024-2025 (33 variables statistiques).
+            Après nettoyage (suppression des doublons pour les joueurs transférés, imputation des
+            pourcentages manquants, filtrage sur le temps de jeu), une analyse descriptive et une
+            matrice de corrélation ont guidé le choix des variables candidates. La multicolinéarité
+            a été contrôlée par VIF, puis la sélection finale réalisée par stepwise (critère AIC,
+            directions <em>both</em> et <em>forward</em>). La non-normalité et l'hétéroscédasticité
+            des résidus ayant été détectées (tests de Shapiro-Wilk et Breusch-Pagan), un modèle
+            linéaire robuste (<code>rlm</code>, package <em>MASS</em>) a été retenu. Sa performance
+            a été évaluée par validation croisée répétée (K=10, 200 répétitions) et des prédictions
+            avec intervalles de confiance par bootstrap ont été produites pour trois profils de joueurs
+            fictifs. L'ensemble des analyses a été réalisé sous R.
+        </p>
+    </section>
+
+    <!-- CE QUE J'AI APPRIS -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Ce que j'ai appris</h2>
+        <ul style="list-style-type: none; padding: 0; display: inline-block; text-align: left;">
+            <li>Conduire toutes les étapes d'une modélisation : exploration, sélection, ajustement, validation</li>
+            <li>Choisir le modèle adapté au type de variables et à l'objectif (prédiction vs parcimonie)</li>
+            <li>Détecter et traiter la multicolinéarité entre variables explicatives par VIF</li>
+            <li>Valider un modèle par l'étude des résidus, le R², les p-values et les tests d'hypothèses</li>
+            <li>Recourir à la régression robuste lorsque les hypothèses classiques ne sont pas vérifiées</li>
+            <li>Évaluer la qualité prédictive par validation croisée et intervalles de confiance bootstrap</li>
+        </ul>
+    </section>
+</main>
+
+</body>
+</html>

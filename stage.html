@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Stage – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="modelisation.html">Modélisation</a></li>
+            <li><a href="traitement.html">Traitement</a></li>
+            <li><a href="analyse.html">Analyse</a></li>
+            <li><a href="valorisation.html">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero-stage">
+    <div class="container">
+        <div class="stage-label">Stage – BUT 2</div>
+        <h1>Structuration, automatisation et visualisation<br>des données dans un cabinet comptable</h1>
+        <div class="stage-meta">
+            <span>GEIREC – Larmor-Plage</span>
+            <span>Mars – Juin 2026</span>
+            <span>12 semaines</span>
+        </div>
+    </div>
+</section>
+
+<!-- CONTEXTE -->
+<section class="section reveal">
+    <div class="container">
+        <h2>Contexte</h2>
+        <div class="section-divider"></div>
+        <p>
+            GEIREC est un cabinet d'expertise comptable breton de près de 400 collaborateurs répartis sur six sites.
+            Mon stage s'est déroulé au sein du pôle Data sur le site de Larmor-Plage.
+            L'objectif était de transformer des données comptables hétérogènes en outils d'aide à la décision
+            fiables et exploitables pour les clients du cabinet.
+        </p>
+    </div>
+</section>
+
+<!-- MISSIONS -->
+<section class="section reveal">
+    <div class="container">
+        <h2>Missions</h2>
+        <div class="section-divider"></div>
+        <p>Le stage a été structuré autour de quatre axes de travail</p>
+        <div class="missions-grid">
+            <div class="mission-item">
+                <h4><i class="fa-solid fa-table-columns" style="color:var(--accent);margin-right:0.5rem;"></i>Tableaux de bord Power BI</h4>
+                <p>Conception et maintenance de dashboards financiers interactifs pour le pilotage des clients.</p>
+            </div>
+            <div class="mission-item">
+                <h4><i class="fa-solid fa-shield-halved" style="color:var(--accent);margin-right:0.5rem;"></i>Fiabilisation des données</h4>
+                <p>Contrôle qualité, détection d'anomalies et nettoyage des données sources avant exploitation.</p>
+            </div>
+            <div class="mission-item">
+                <h4><i class="fa-solid fa-database" style="color:var(--accent);margin-right:0.5rem;"></i>Architecture Microsoft Fabric</h4>
+                <p>Structuration des flux de données via une architecture en couches Bronze / Silver / Gold dans le cloud.</p>
+            </div>
+            <div class="mission-item">
+                <h4><i class="fa-solid fa-gears" style="color:var(--accent);margin-right:0.5rem;"></i>Automatisation</h4>
+                <p>Remplacement de traitements manuels Excel par des solutions Power Query, VBA et Python.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJETS -->
+<section class="section reveal">
+    <div class="container">
+        <h2>Projets réalisés</h2>
+        <div class="section-divider"></div>
+        <div class="projects-list">
+
+            <div class="project-card">
+                <div class="project-number">01</div>
+                <div class="project-content">
+                    <h4>Intégration budgétaire – Groupe de restauration rapide</h4>
+                    <p>Intégration de budgets prévisionnels multi-exercices dans un tableau de bord Power BI existant. Développement de mesures DAX pour calculer les écarts Réel / Budget et les cumuls Year-To-Date sur 25 restaurants.</p>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Power Query</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-number">02</div>
+                <div class="project-content">
+                    <h4>Geirec Académie – Migration vers Microsoft Fabric</h4>
+                    <p>Refonte complète de l'infrastructure data de la plateforme de formation interne. Migration depuis des fichiers Excel locaux vers un Lakehouse Fabric centralisé avec import de 22 fichiers JSON, modélisation relationnelle et déploiement d'un modèle sémantique partagé.</p>
+                    <div class="project-tags">
+                        <span class="tag">Microsoft Fabric</span>
+                        <span class="tag">JSON</span>
+                        <span class="tag">Power Query</span>
+                        <span class="tag">DAX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-number">03</div>
+                <div class="project-content">
+                    <h4>Tableau de bord financier – Restauration traditionnelle</h4>
+                    <p>Construction d'un tableau de bord complet à partir de l'API Pennylane pour deux établissements avec exercice comptable décalé (décembre–novembre). Développement de plus d'une centaine de mesures DAX incluant la segmentation solide / liquide et le suivi budgétaire.</p>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">API Pennylane</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-number">04</div>
+                <div class="project-content">
+                    <h4>Automatisation comptable – Client opticien</h4>
+                    <p>Traitement automatisé d'exports d'un logiciel de caisse via neuf requêtes Power Query liées. Génération automatique d'une feuille CA reclassée, d'un journal des ventes et d'un journal des encaissements conformes aux normes comptables.</p>
+                    <div class="project-tags">
+                        <span class="tag">Power Query</span>
+                        <span class="tag">Excel</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-number">05</div>
+                <div class="project-content">
+                    <h4>Balances mensuelles automatiques – Client bricolage</h4>
+                    <p>Transformation d'un grand livre brut CSV en balances mensuelles structurées via Power Query, avec génération automatique des feuilles Excel par une macro VBA.</p>
+                    <div class="project-tags">
+                        <span class="tag">Power Query</span>
+                        <span class="tag">VBA</span>
+                        <span class="tag">Excel</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-number">06</div>
+                <div class="project-content">
+                    <h4>Tableau de bord de pilotage – Groupe dentaire</h4>
+                    <p>Maquettage d'un dashboard de pilotage avec données fictives, pipeline d'extraction Pennylane pour deux entités juridiques, pseudonymisation des données patients et mise en place de la Row-Level Security (RLS).</p>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Microsoft Fabric</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">RLS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- OUTILS -->
+<section class="section reveal">
+    <div class="container">
+        <h2>Outils et technologies</h2>
+        <div class="section-divider"></div>
+        <p>Tous les projets s'appuient sur une base technique mobilisée tout au long du stage.</p>
+        <div class="tools-grid">
+            <span class="tool-badge">Power BI Desktop</span>
+            <span class="tool-badge">Microsoft Fabric</span>
+            <span class="tool-badge">DAX</span>
+            <span class="tool-badge">Power Query (M)</span>
+            <span class="tool-badge">Python (pandas / PySpark)</span>
+            <span class="tool-badge">VBA</span>
+            <span class="tool-badge">Excel</span>
+            <span class="tool-badge">JSON</span>
+            <span class="tool-badge">Lakehouse</span>
+        </div>
+    </div>
+</section>
+
+<!-- BILAN -->
+<section class="section reveal">
+    <div class="container">
+        <h2>Bilan</h2>
+        <div class="section-divider"></div>
+        <div class="bilan-grid">
+            <div class="bilan-card">
+                <h4>Apports techniques</h4>
+                <p>Montée en compétence sur Power BI, DAX et Power Query avec plus d'une centaine de mesures développées. Première expérience significative sur Microsoft Fabric et les architectures cloud de données.</p>
+            </div>
+            <div class="bilan-card">
+                <h4>Apports pour le cabinet</h4>
+                <p>Réduction des manipulations manuelles, fiabilisation des données et fourniture aux clients d'indicateurs accessibles en temps réel pour le pilotage de leur activité.</p>
+            </div>
+            <div class="bilan-card">
+                <h4>Compétences acquises</h4>
+                <p>Compréhension des mécanismes comptables (SIG, PCG, exercices décalés), collaboration inter-sites et gestion de plusieurs projets en parallèle dans un environnement professionnel.</p>
+            </div>
+            <div class="bilan-card">
+                <h4>Limites identifiées</h4>
+                <p>Qualité et disponibilité des données parfois contraignantes, développements réalisés sur données fictives en attente d'accès aux systèmes réels, profondeur d'approfondissement limitée par la diversité des projets.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <a href="https://www.linkedin.com/in/alexis-le-labousse-7b98ba330/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+        </a>
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            alexis.lelabousse@gmail.com
+        </span>
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            07 69 80 31 28
+        </span>
+    </div>
+</footer>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+        reveals.forEach(el => {
+            const top = el.getBoundingClientRect().top;
+            if (top < window.innerHeight - 100) {
+                el.classList.add('active');
+            }
+        });
+    });
+    window.dispatchEvent(new Event('scroll'));
+</script>
+
+</body>
+</html>

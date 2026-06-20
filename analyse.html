@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyse – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Police -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS commun -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="modelisation.html">Modélisation</a></li>
+            <li><a href="traitement.html">Traitement</a></li>
+            <li><a href="analyse.html" class="active">Analyse</a></li>
+            <li><a href="valorisation.html">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>Comprendre et interpréter les données</h2>
+        <p class="intro">
+            L’analyse des données vise à explorer, décrire et interpréter des jeux de données
+            afin d’en extraire des informations pertinentes. Elle repose sur des méthodes
+            statistiques, graphiques et multivariées permettant d’identifier des tendances,
+            des relations et des structures utiles à la prise de décision.
+        </p>
+    </div>
+</section>
+
+<section class="section sae-section reveal">
+    <div class="container">
+        <h3>Estimation de la population bretonne par échantillonnage stratifié</h3>
+
+        <p>
+            Lors de cette SAÉ, l’objectif était d’estimer la population totale de la Bretagne
+            à partir d’un échantillon de communes. Nous avons étudié les limites de l’échantillonnage
+            aléatoire simple face à une population très hétérogène, puis mis en œuvre
+            une méthode d’échantillonnage stratifié plus adaptée.
+            L’ensemble des calculs et simulations a été réalisé sous R.
+        </p>
+
+        <div class="sae-proof-animated">
+        <a href="sae2-02.html">
+            <div class="sae-proof">
+                <img src="images/preuve_SAE2.02.png" alt="Echantillon stratifié SAE 2-02">
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+
+<section class="section sae-section reveal">
+    <div class="container">
+        <h3>Analyse de la relation entre le niveau de vie des ménages et le prix des maisons à Boston</h3>
+
+            <p>
+            À travers cette SAÉ, l’objectif était d’étudier l’évolution du prix médian des maisons dans les quartiers de Boston 
+            en fonction de la proportion de ménages ayant un niveau de vie faible.
+            Nous avons réalisé plusieurs modèles de régression afin de comparer la qualité des ajustements : 
+            régression linéaire, régression polynomiale et régression après transformation logarithmique de variable.
+            L’ensemble des analyses statistiques et représentations graphiques a été réalisé sous R.
+            </p>
+
+        <div class="sae-proof-animated">
+        <a href="sae2-03.html">
+            <div class="sae-proof">
+                <img src="images/preuve_SAE2.03.png" alt="SAÉ 2.03 : Régression sur données réelles">
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+        reveals.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (top < windowHeight - 100) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

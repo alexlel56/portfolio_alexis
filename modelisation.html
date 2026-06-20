@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Modélisation – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Police -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS commun -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="modelisation.html" class="active">Modélisation</a></li>
+            <li><a href="traitement.html">Traitement</a></li>
+            <li><a href="analyse.html">Analyse</a></li>
+            <li><a href="valorisation.html">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>La donnée en modèle</h2>
+        <p class="intro">
+            En Science des Données, la modélisation consiste à représenter la réalité à l’aide
+            de modèles statistiques ou mathématiques afin de comprendre, expliquer ou prévoir
+            des phénomènes à partir des données. Elle permet de transformer des données brutes
+            en outils d’aide à la décision.
+        </p>
+    </div>
+</section>
+
+<section class="section sae-section reveal">
+    <div class="container">
+        <h3>Construction d'un indice d'abondance par échantillonnage stratifié océanographique</h3>
+
+        <p>
+            Lors de cette SAÉ, l'objectif était d'estimer l'abondance du merlu 
+            dans le Golfe de Gascogne et en Mer Celtique
+            à partir des données de la campagne océanographique EVHOE (2008–2019).
+            Nous avons mis en œuvre un estimateur de Horvitz-Thompson stratifié sur 28 strates
+            géographiques et de profondeur, calculé les intervalles de confiance à 95 % pour
+            chaque année, puis évalué l'impact du niveau de stratification sur la précision
+            des estimations. L'ensemble de l'analyse a été réalisé sous R.
+        </p>
+
+        <div class="sae-proof-animated">
+        <a href="sae3-01.html">
+            <div class="sae-proof">
+                <img src="images/preuve_SAE3.01.png" alt="Abondance annuelle de merlu avec intervalles de confiance 95% - SAE 3-01">
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+
+<section class="section sae-section reveal">
+    <div class="container">
+        <h3>Modélisation du nombre de points marqués en NBA par régression linéaire robuste</h3>
+
+            <p>
+            À travers cette SAÉ, l'objectif était de prédire le nombre de points marqués par un joueur NBA
+            lors de la saison 2024-2025 à partir de ses statistiques individuelles (salaire, tentatives à trois points,
+            lancers francs, rebonds, interceptions). Après sélection de variables par critères VIF et AIC,
+            nous avons opté pour un modèle linéaire robuste afin de gérer la non-normalité des résidus
+            et l'influence des superstars. La performance du modèle a été évaluée par validation croisée répétée
+            (K=10, 200 répétitions) et des prédictions avec intervalles de confiance bootstrap.
+            L'ensemble des analyses a été réalisé sous R.
+            </p>
+
+        <div class="sae-proof-animated">
+        <a href="sae4-01.html">
+            <div class="sae-proof">
+                <img src="images/preuve_SAE4.01.png" alt="SAÉ 4-01 : Relation entre salaire et points marqués en NBA">
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+        reveals.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (top < windowHeight - 100) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

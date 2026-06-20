@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SAE 2-02 – Estimation par échantillonnage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="modelisation.html">Modélisation</a></li>
+            <li><a href="traitement.html">Traitement</a></li>
+            <li><a href="analyse.html">Analyse</a></li>
+            <li><a href="valorisation.html">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- TITRE SAE -->
+    <section class="sae-container" style="text-align:center;">
+        <h1>Estimation de la population bretonne par échantillonnage</h1>
+        <div class="sae-proof-static">
+            <img src="images/preuve_SAE2.02.png" alt="Echantillon stratifié SAE 2-02">
+            <p class="sae-caption">Simulation sous R d’intervalles de confiance et mise en œuvre d’un échantillonnage stratifié</p>
+        </div>
+    </section>
+
+    <!-- OBJECTIFS DU PROGRAMME NATIONAL -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Objectifs du programme national</h2>
+        <p>
+            Cette SAÉ vise à comprendre comment estimer des paramètres d’une population
+            à partir d’un échantillon, en intégrant la notion essentielle de marge d’erreur.
+            Elle met l’accent sur la différence entre population et échantillon, ainsi que sur
+            la fluctuation d’échantillonnage. L’objectif est d’apprendre à construire et
+            interpréter des intervalles de confiance, tout en prenant conscience de
+            l’incertitude inhérente à toute estimation statistique.
+        </p>
+    </section>
+
+    <!-- COMPÉTENCES DU PROGRAMME MOBILISÉES -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Compétences du programme mobilisées</h2>
+        <ul style="list-style-type: none; padding: 0; display: inline-block; text-align: left;">
+            <li>Analyser statistiquement des données issues d’un échantillonnage</li>
+            <li>Construire et interpréter des intervalles de confiance</li>
+            <li>Comprendre la fluctuation d’échantillonnage à l’aide de simulations</li>
+            <li>Identifier les limites d’un modèle statistique face à une population hétérogène</li>
+            <li>Mettre en œuvre un modèle probabiliste sous R</li>
+        </ul>
+    </section>
+
+    <!-- MÉTHODOLOGIE ET OUTILS UTILISÉS -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Méthodologie et outils utilisés</h2>
+        <p>
+            Le travail a été réalisé à partir d’un jeu de données contenant les populations
+            des communes bretonnes. Une première estimation a été effectuée par
+            échantillonnage aléatoire simple, avec construction d’un intervalle de confiance
+            à 95 % pour la population totale. Des simulations répétées (50 itérations)
+            ont permis d’évaluer empiriquement la proportion d’intervalles contenant la
+            vraie valeur.
+            Face à l’hétérogénéité marquée des communes, une méthode d’échantillonnage
+            stratifié a ensuite été mise en œuvre afin d’améliorer la précision de l’estimation.
+            L’ensemble des calculs et visualisations a été réalisé sous R.
+        </p>
+    </section>
+
+    <!-- CE QUE J'AI APPRIS --> 
+    <section class="sae-section" style="text-align:center;">
+        <h2>Ce que j’ai appris</h2>
+        <ul style="list-style-type: none; padding: 0; display: inline-block; text-align: left;">
+            <li>Comprendre concrètement la différence entre un échantillon et une population</li>
+            <li>Mesurer l’impact de l’hétérogénéité sur la précision d’une estimation</li>
+            <li>Mettre en évidence la fluctuation d’échantillonnage grâce à des simulations</li>
+            <li>Adapter une méthode statistique (stratification) pour améliorer la fiabilité des résultats</li>
+            <li>Interpréter de manière critique un intervalle de confiance</li>
+        </ul>
+    </section>
+</main>
+
+</body>
+</html>

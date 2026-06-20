@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Valorisation – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Police -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS commun -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="modelisation.html">Modélisation</a></li>
+            <li><a href="traitement.html">Traitement</a></li>
+            <li><a href="analyse.html">Analyse</a></li>
+            <li><a href="valorisation.html" class="active">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>Donner du sens aux résultats</h2>
+        <p class="intro">
+            La valorisation des données consiste à restituer les résultats d’analyses de
+            manière claire, compréhensible et adaptée au public ciblé. Elle s’appuie sur
+            des visualisations, des indicateurs synthétiques et des supports de communication
+            permettant de transformer des résultats techniques en informations exploitables.
+        </p>
+    </div>
+</section>
+
+<section class="section sae-section reveal">
+    <div class="container">
+        <h3>Analyse et prévision du trafic aéroportuaire : impact du COVID-19</h3>
+
+        <p>
+            Ce projet s’inscrit dans l’analyse de données temporelles appliquée au trafic
+            aéroportuaire parisien. À partir de données mensuelles couvrant la période
+            2010 à 2025, l’objectif est d’étudier l’évolution du nombre de passagers et
+            de mouvements sur les aéroports de Roissy-Charles de Gaulle et d’Orly.
+            Une attention particulière est portée à la rupture provoquée par la crise
+            sanitaire du COVID-19 et à ses impacts sur l’activité.
+        </p>
+
+        <div class="sae-proof-animated">
+        <a href="sae3-03.html">
+            <div class="sae-proof">
+                <img src="images/preuve_SAE3.03.png" alt="Analyse trafic aéroportuaire CDG Orly" style="max-width: 60%">
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+
+<section class="section sae-section reveal">
+    <div class="container">
+        <h3>Développement et reporting d’une application d’analyse multivariée</h3>
+
+        <p>
+            Dans le cadre de cette SAÉ, j’ai participé à la conception d’une application interactive sous R Shiny
+            permettant d’exploiter des données réelles issues du domaine viticole. L’objectif était de répondre à une
+            problématique de recommandation en s’appuyant sur des méthodes d’analyse multivariée telles que l’ACP
+            et le clustering. Cette application permet à un utilisateur de sélectionner un vin et d’obtenir des
+            recommandations personnalisées ainsi que des visualisations interactives facilitant l’interprétation des résultats.
+        </p>
+
+        <div class="sae-proof-animated">
+        <a href="sae4-02.html">
+            <div class="sae-proof">
+                <img src="images/preuve_SAE4.02.png" alt="Application R Shiny recommandation de vins">
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+        reveals.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (top < windowHeight - 100) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

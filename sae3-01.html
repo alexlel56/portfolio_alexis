@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SAÉ 3-01 – Estimation de l'abondance du merlu par sondage stratifié</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="modelisation.html">Modélisation</a></li>
+            <li><a href="traitement.html">Traitement</a></li>
+            <li><a href="analyse.html">Analyse</a></li>
+            <li><a href="valorisation.html">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- TITRE SAE -->
+    <section class="sae-container" style="text-align:center;">
+        <h1>Construction d'un indice d'abondance à partir de données de campagne océanographique</h1>
+        <div class="sae-proof-static">
+            <img src="images/preuve_SAE3.01.png" alt="Abondance annuelle de merlu avec intervalles de confiance 95% - SAÉ 3-01">
+            <p class="sae-caption">Estimations annuelles de l'abondance du merlu (<em>Merluccius merluccius</em>) avec intervalles de confiance à 95 % — campagne EVHOE 2008–2019</p>
+        </div>
+    </section>
+
+    <!-- OBJECTIFS DU PROGRAMME NATIONAL -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Objectifs du programme national</h2>
+        <p>
+            Cette SAÉ place l'étudiant dans la situation d'un chargé d'étude statistique confronté à une
+            problématique réelle d'estimation sur une population de grande taille. Il doit construire un plan
+            de sondage adapté, estimer la valeur d'une statistique à partir d'un échantillon et calculer la
+            précision de l'estimateur utilisé. La SAÉ vise à approfondir la notion d'enquête et de sondage,
+            à comprendre les implications du tirage sans remise et à mener une réflexion sur la mise en place
+            d'un plan d'expérience complet, de la constitution de l'échantillon jusqu'à la restitution des résultats.
+        </p>
+    </section>
+
+    <!-- COMPÉTENCES DU PROGRAMME MOBILISÉES -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Compétences du programme mobilisées</h2>
+        <ul style="list-style-type: none; padding: 0; display: inline-block; text-align: left;">
+            <li>Modéliser les données dans un cadre statistique</li>
+            <li>Comprendre l'intérêt de planifier le recueil des données</li>
+            <li>Appréhender les difficultés et les limites rencontrées dans la mise en œuvre d'un terrain de collecte</li>
+            <li>Comprendre l'impact du type de données sur le choix de la modélisation à mettre en œuvre</li>
+            <li>Traiter des données à des fins décisionnelles</li>
+            <li>Valoriser une production dans un contexte professionnel</li>
+        </ul>
+    </section>
+
+    <!-- MÉTHODOLOGIE ET OUTILS UTILISÉS -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Méthodologie et outils utilisés</h2>
+        <p>
+            Les données proviennent de la campagne EVHOE (Évaluation Halieutique Ouest de l'Europe),
+            réalisée chaque année en octobre-novembre dans le Golfe de Gascogne et la Mer Celtique.
+            Le domaine d'étude est découpé en 28 strates définies par la profondeur et les grandes unités
+            écologiques. Pour chaque trait de chalut, la surface balayée (distance x ouverture du chalut)
+            constitue la taille d'échantillon locale. L'abondance totale est estimée via l'estimateur de
+            Horvitz-Thompson stratifié, implémenté avec les fonctions <code>HTstrata</code> et <code>varest</code>
+            du package <em>sampling</em> sous R. Les intervalles de confiance à 95 % sont calculés pour
+            chaque année entre 2008 et 2019, puis les estimations sont comparées selon deux niveaux de
+            stratification : les 28 strates d'origine et un regroupement en 5 grandes zones géographiques
+            (Cc, Cn, Cs, Gn, Gs).
+        </p>
+    </section>
+
+    <!-- CE QUE J'AI APPRIS -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Ce que j'ai appris</h2>
+        <ul style="list-style-type: none; padding: 0; display: inline-block; text-align: left;">
+            <li>Mise en œuvre d'un sondage stratifié à probabilités inégales sur des données réelles</li>
+            <li>Calcul et interprétation de l'estimateur de Horvitz-Thompson et de sa variance</li>
+            <li>Traitement des données manquantes par imputation par la moyenne</li>
+            <li>Analyse de l'impact du niveau de stratification sur la précision des estimations</li>
+            <li>Manipulation de données spatiales sous R (packages <em>sf</em>, <em>ggplot2</em>, jointures géographiques)</li>
+            <li>Identification et correction d'une anomalie d'échantillonnage (sous-couverture de 2017)</li>
+        </ul>
+    </section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SAE 4-02 – Développement et reporting d’une application d’analyse multivariée</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="modelisation.html">Modélisation</a></li>
+            <li><a href="traitement.html">Traitement</a></li>
+            <li><a href="analyse.html">Analyse</a></li>
+            <li><a href="valorisation.html">Valorisation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- TITRE SAE -->
+    <section class="sae-container" style="text-align:center;">
+        <h1>Développement d’une application R Shiny pour l’analyse et la recommandation de vins</h1>
+        <div class="sae-proof-static">
+            <img src="images/preuve_SAE4.02.png" alt="Application R Shiny recommandation de vins">
+            <p class="sae-caption">
+                Interface de recommandation de vins basée sur une analyse multivariée (ACP et clustering)  
+                <br>
+                <strong>Lien vers l'application :</strong> 
+                <a href="https://fontaine.shinyapps.io/Recommandation_Vin_Portugais/" target="_blank">
+                    https://fontaine.shinyapps.io/Recommandation_Vin_Portugais/
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- OBJECTIFS DU PROGRAMME NATIONAL -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Objectifs du programme national</h2>
+        <p>
+            Cette SAÉ s’inscrit dans la phase de valorisation des données au sein du processus
+            décisionnel. Elle vise à concevoir un outil de reporting permettant de restituer de manière
+            automatisée les résultats d’une analyse exploratoire de données multivariées.
+            L’enjeu est de savoir combiner traitement, analyse et restitution des données afin de répondre
+            à une problématique métier. Il s’agit également de choisir des méthodes statistiques adaptées,
+            telles que l’analyse factorielle ou la classification, et de les intégrer dans un outil interactif
+            facilitant l’interprétation et l’aide à la décision.
+        </p>
+    </section>
+
+    <!-- COMPÉTENCES DU PROGRAMME MOBILISÉES -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Compétences du programme mobilisées</h2>
+            <ul>
+                <li>Traiter des données à des fins décisionnelles</li>
+                <li>Réaliser une analyse statistique multivariée</li>
+                <li>Concevoir un outil de reporting interactif</li>
+                <li>Présenter et valoriser des résultats dans un contexte professionnel</li>
+            </ul>
+    </section>
+
+    <!-- MÉTHODOLOGIE ET OUTILS UTILISÉS -->
+    <section class="sae-section" style="text-align:center;">
+        <h2>Méthodologie et outils utilisés</h2>
+        <p>
+            Le projet repose sur l’analyse de données réelles issues du domaine viticole. Après une phase
+            de préparation des données (nettoyage, transformation et sélection des variables pertinentes),
+            une analyse en composantes principales (ACP) a été réalisée afin de réduire la dimension des
+            données et de mettre en évidence les principales structures.
+            Une méthode de classification non supervisée (clustering) a ensuite été appliquée pour
+            regrouper les vins selon leurs caractéristiques chimiques.
+            Ces analyses ont été intégrées dans une application interactive développée avec R Shiny
+            permettant à l’utilisateur de sélectionner un vin et d’obtenir des recommandations basées
+            sur sa proximité avec d’autres profils. Des visualisations interactives (graphique radar,
+            tableaux dynamiques) ont été mises en place pour faciliter l’interprétation des résultats.
+        </p>
+    </section>
+
+    <!-- CE QUE J'AI APPRIS --> 
+    <section class="sae-section" style="text-align:center;">
+        <h2>Ce que j’ai appris</h2>
+        <ul>
+            <li>Comprendre le rôle du reporting dans un processus décisionnel</li>
+            <li>Mettre en œuvre une analyse exploratoire multivariée sur des données réelles</li>
+            <li>Utiliser l’ACP et le clustering pour synthétiser et segmenter l’information</li>
+            <li>Développer une application interactive avec R Shiny</li>
+            <li>Transformer des résultats statistiques en outil d’aide à la décision</li>
+            <li>Présenter des résultats de manière claire, structurée et adaptée à un utilisateur</li>
+        </ul>
+    </section>
+</main>
+
+</body>
+</html>
